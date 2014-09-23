@@ -1,0 +1,34 @@
+<ion-view title="WeekDay">
+  <ion-content class="padding">
+    <p>Discover the day of the week</p>
+
+    <form ng-submit="dayOfWeek(weekDay)">
+		<div class="list">
+			<label>
+				Year:
+			</label>	
+			<label class="item item-input">
+				<input type="text" ng-model="weekDay.year">
+			</label>
+			<label>
+				Month:
+			</label>	
+			<label class="item item-input">
+				<input type="text" ng-model="weekDay.month">
+			</label>
+			<label>
+				Day:
+			</label>	
+			<label class="item item-input">
+				<input type="text" ng-model="weekDay.day">
+			</label>
+        </div>
+        <div class="padding">
+          <button type="submit" class="button button-block button-positive">Calculate</button>
+        </div>
+	</form>
+	<label class="item item-input">
+		<input type="text" placeholder="Please inform the values above" ng-model="weekDay.week">
+	</label>
+  </ion-content>
+</ion-view>
