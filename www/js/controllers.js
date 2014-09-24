@@ -3,10 +3,9 @@ angular.module('starter.controllers', [])
 .controller('DashCtrl', function($scope) {
 
 	$scope.dayOfWeek = function(weekDay){
-		if (weekday) {
+		if (weekDay) {
 	    	var week = new Date(parseInt(weekDay.year), parseInt(weekDay.month)-1, parseInt(weekDay.day));
 	    	var weekday = week.getDay();
-
 			switch (weekday) {
 				case 0:
 				 	weekDay.week = 'Sunday';
