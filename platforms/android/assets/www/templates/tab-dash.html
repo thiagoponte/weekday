@@ -2,25 +2,13 @@
   <ion-content class="padding">
     <p>Discover the day of the week</p>
 
-    <form name="weekDayForm" ng-submit="weekDayForm.$valid && dayOfWeek(weekDay)" novalidate>
+    <form name="weekDayForm" ng-submit="dayOfWeek(weekDay)" novalidate>
 		<div class="list">
 			<label>
-				Year:
-			</label>	
-			<label class="item item-input">
-				<input type="date" ng-model="weekDay.year" required>
+				Date:
 			</label>
-			<label>
-				Month:
-			</label>	
 			<label class="item item-input">
-				<input type="number" ng-model="weekDay.month" required min="1" max="12">
-			</label>
-			<label>
-				Day:
-			</label>	
-			<label class="item item-input">
-				<input type="number" ng-model="weekDay.day" required min="1" max="31">
+				<input type="date" ng-model="weekDay.date" required>
 			</label>
         </div>
         <div class="padding">
@@ -28,7 +16,7 @@
         </div>
 	</form>
 	<label class="item item-input">
-		<input type="text" placeholder="Please inform the values above" ng-model="weekDay.week" readonly="true">
+		<input type="text" placeholder="Please inform the date above" ng-model="weekDay.week" readonly="true">
 	</label>
   </ion-content>
 </ion-view>

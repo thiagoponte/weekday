@@ -1,32 +1,33 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function ($scope) {
 
-	$scope.dayOfWeek = function(weekDay){
+	$scope.dayOfWeek = function (weekDay){
 		if (weekDay) {
-	    	var week = new Date(parseInt(weekDay.year), parseInt(weekDay.month)-1, parseInt(weekDay.day));
-	    	var weekday = week.getDay();
+			var date = new Date(weekDay.date);
+	    	var weekday = date.getDay();
+	    	console.log(weekday);
 			switch (weekday) {
 				case 0:
-				 	weekDay.week = 'Sunday';
-				break;
-				case 1:
 				 	weekDay.week = 'Monday';
 				break;
-				case 2:
+				case 1:
 				 	weekDay.week = 'Tuesday';
 				break;
-				case 3:
+				case 2:
 					weekDay.week = 'Wednesday';
 				break;
-				case 4:
+				case 3:
 					weekDay.week = 'Thursday';
 				break;
-				case 5:
+				case 4:
 					weekDay.week = 'Friday';
 				break;
-				case 6:
+				case 5:
 					weekDay.week = 'Saturday';
+				break;
+				case 6:
+				 	weekDay.week = 'Sunday';
 				break;
 			}
 		}
